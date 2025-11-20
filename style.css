@@ -1,0 +1,170 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: radial-gradient(circle at top, #121826, #0c0f18);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 950px;
+        background: rgba(255,255,255,0.06);
+        backdrop-filter: blur(15px);
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #67e8f9;
+        text-shadow: 0 0 10px #00eaff;
+    }
+
+    /* ---------- FORM GRID ---------- */
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .form input,
+    .form select {
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        background: rgba(255,255,255,0.15);
+        color: #fff;
+        outline: none;
+        font-size: 1rem;
+    }
+
+    .form button {
+        grid-column: span 2;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #06b6d4, #3b82f6);
+        color: #fff;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .form button:hover {
+        opacity: 0.9;
+        transform: scale(1.02);
+    }
+
+    /* ---------- TABLE WRAP FOR MOBILE ---------- */
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px; /* prevents column squishing */
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        font-size: 0.95rem;
+    }
+
+    th {
+        background: rgba(255,255,255,0.15);
+        color: #67e8f9;
+        white-space: nowrap;
+    }
+
+    td {
+        background: rgba(0,0,0,0.2);
+    }
+
+    .remove-btn {
+        background: #ef4444;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* ---------- SUMMARY ---------- */
+    .summary {
+        margin-top: 25px;
+        padding: 20px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .summary-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #67e8f9;
+    }
+
+    /* ---------- CHART ---------- */
+    #chart {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ---------- RESPONSIVENESS ---------- */
+
+    @media (max-width: 780px) {
+        .form {
+            grid-template-columns: 1fr;
+        }
+        .form button {
+            grid-column: span 1;
+        }
+
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .container {
+            padding: 18px;
+        }
+
+        .form input,
+        .form select {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+
+        th, td {
+            font-size: 0.85rem;
+            padding: 10px;
+        }
+
+        .summary-title {
+            font-size: 1.1rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }

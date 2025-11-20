@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Expense Tracker</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>💠 Expense Tracker</h1>
+
+        <!-- Form -->
+        <div class="form">
+            <input type="text" id="title" placeholder="Expense Title" />
+            <input type="number" id="amount" placeholder="Amount" />
+
+            <select id="category">
+                <option value="Food">🍔 Food</option>
+                <option value="Transport">🚗 Transport</option>
+                <option value="Shopping">🛍️ Shopping</option>
+                <option value="Bills">💡 Bills</option>
+                <option value="Entertainment">🎮 Entertainment</option>
+                <option value="Other">🔧 Other</option>
+            </select>
+
+            <input type="date" id="date" />
+
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <!-- Table with mobile scroll -->
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Amount ($)</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseTable"></tbody>
+            </table>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            <div class="summary-title">📅 Monthly Summary</div>
+            <p id="monthlyTotal" style="font-size:1.1rem;"></p>
+        </div>
+
+        <!-- Chart -->
+        <canvas id="chart" style="margin-top:20px;"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
