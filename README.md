@@ -12,7 +12,7 @@ It uses **localStorage** to securely store user data directly in the browser—n
 
 ## 🚀 Live Demo
 
-👉 *Add your live URL here when deployed*
+👉 https://faraza11.github.io/Expense-tracker
 
 
 ## 🌟 Features
